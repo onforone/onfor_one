@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Brand Hacker</title>
+
+  <meta name="description" content="ONFOR — Brand Hacker. Create or reconstruct. Philosophy into system. Design the outcome." />
+  <meta name="keywords" content="brand hacking, brand deconstruction, brand rebuild, identity systems, strategic design, brand engineering, design systems, brand transformation, positioning strategy, visual systems" />
+  <meta name="author" content="ONFOR" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ONFOR — Brand Hacker" />
+  <meta property="og:description" content="Brand hacking, Design, AI integration." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://onfor.one" />
+  <meta property="og:image" content="https://onfor.one/img/logo_preview_1280_640.png" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="640" />
+  <link rel="canonical" href="https://onfor.one" />
+  <meta property="og:site_name" content="ONFOR" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ONFOR — Brand Hacker" />
+  <meta name="twitter:description" content="Brand hacking, Design, and AI integration." />
+  <meta name="twitter:image" content="https://onfor.one/img/logo_preview_1280_640.png" />
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://onfor.one" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<header> </header>
+
+<main class="hero">
+  <div class="hero-content" id="parallax">
+
+    <a href="#" class="cta logo-link" id="openModal">
+    <img src="img/origin_STAR_1000.png" alt="Brand Hacker logo" class="logo" />
+    </a>
+
+    <h1 class="title">
+      Brand Hacking &nbsp|&nbsp Digital Content Production &nbsp|&nbsp AI Integration
+    </h1>
+
+  </div>
+</main>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+
+    <span class="close" id="close">&times;</span>
+
+    <h2>Access Limited</h2>
+    <p>Main platform is currently in development.</p>
+
+    <a href="https://onfor.pro" target="_blank">transition to onfor.pro</a>
+
+  </div>
+</div>
+
+<!-- Mouse Parallax -->
+<script>
+const el = document.getElementById("parallax");
+
+document.addEventListener("mousemove", (e) => {
+  const x = (window.innerWidth / 2 - e.clientX) / 40;
+  const y = (window.innerHeight / 2 - e.clientY) / 40;
+
+  el.style.transform = `translate(${x}px, ${y}px)`;
+});
+</script>
+
+<script>
+const modal = document.getElementById("modal");
+const openBtn = document.getElementById("openModal");
+const closeBtn = document.getElementById("close");
+
+openBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  modal.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("active");
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    modal.classList.remove("active");
+  }
+});
+</script>
+
+</body>
+</html>
